@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ferdinand Dorado - Homepage</title>
+    <!-- Globe rendering js script -->
+    <script type="module" src="globe.js"></script>
+    <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="styless.css">
+    <link rel="icon" type="" href="./assets/favicon.ico"/>
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+<body class="black">
+    <div class="container-fluid p-0">
+        <nav id='navbar' class="navbar navbar-expand-lg navbar-light fixed-top black">
+            <a class="navbar-brand text-light" href="#"><img src="./assets/home.png" alt="home"></a>
+        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link text-light">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link text-light">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link text-light">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <canvas id="globe" class="position-fixed" href="#"></canvas>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="front col-7 content">
+                <h1 id="title">
+                </h1>
+                <div id="about" href="#about">
+                    <h2>
+                        About
+                    </h2>
+                    <p>
+                        Hello, <br> My name is Ferdinand. My education background is in computer science and geographic information systems. I am in the process of completing my Bachelors of Technology in Geographic Information Systems. This website is to showcase some projects I have worked on.
+                    </p>
+                    <br>
+                </div>
+                <div class="col-lg-7">
+                    <figure class="figure">
+                        <img src="./assets/me.png" class="figure-img img-fluid rounded" alt="Me in Victora BC">
+                      </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="projects" class="position-sticky container-fluid front">
+        <h1 class="prjText">
+            Projects
+        </h1>
+        <div class="row">
+            <div id="" class="prjItem" href="#projects">
+                <h2 class="">Vector Tile Base map Cache</h2>
+                <ul>
+                    <li class="prjText">
+                        Industry project sponsored by the RCMP E Division. The goal of this project is to create a base map tile cache of the province of British Columbia and it was created in ArcGIS Pro. The goal for this project is so that the RCMP can have an internal reference base map for computers that are not connected to the internet. Symbology was created for each dataset, as well as, showing each dataset at the appropriate zoom level.
+                    </li>
+                    <li class="prjText">
+                        <img class="prjPicture" src="./assets/zoomOut.gif" alt="zoom out of the province">
+                    </li>
+                    <li class="prjText">
+                        This project uses datasets obtained from OpenStreetMaps and internal datasets from the sponsor. A model was created using model builder and python, to update the tile cache when importing updated datasets. <br><br>Additionally, a python script was created to download the Community Maps Of Canada (CMOC) offline vector tile package on ArcGIS Online. This map is created by ESRI Canada and the script uses the Python API for ArcGIS Online to download the tile package. The CMOC map is used as an alternative base map. 
+                        <br>Link to the script <a href="https://github.com/ferdsdo/getCMOC/blob/main/getCMOC.py">here.</a>
+                        <br><br>There are mutiple ways to update the datasets, either by using the models or with a csv file. Documentation was created so that users can utilize the models/scripts and troubleshoot common problems that occur when rendering the tile cache.
+                        <br>Link to a copy of the documentation <a href="https://drive.google.com/file/d/1ZeWf61Wg-hnt7LT1FeWVfDym82kUXHK_/view?usp=sharing">here.</a>
+                    </li>
+                    <li class="prjText">
+                    </li>
+                    <li class="container">
+                        <div class="row align-items-start">
+                            <div class="col text-center">
+                                <img class="prjPicture" src="./assets/geoprocess.png" alt="geoprocess tool"> 
+                                <p>Geoprocessing tool created to update one or more datasets</p>
+                            </div>
+                            <div class="col text-center">
+                                <img class="prjPicture" src="./assets/layers.png" alt="base map layers">
+                                <p>Layers used in the base map</p>
+                            </div>
+                        </div>    
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div id="" class="prjItem">
+                <h2 class="">Crime Heatmap</h2>
+                <ul>
+                    <li class="prjText">
+                        Using datasets obtained from the <a href="https://geodash.vpd.ca/opendata/">Vancouver Police Department </a> open data portal I created a heatmap showcasing all vehicle related crimes in the City of Vancouver. Crime are sorted by day/night and theft of vehicle/theft from vehicle. These maps were created in QGIS.
+                    </li>
+                    <li class="container">
+                        <div class="row align-items-start">
+                            <div class="col text-center">
+                                <img src="./assets/dayFromVehicle.png" alt="Theft from vehicle daytime" style="width: 100%;"> 
+                                <p>Daytime theft from a vehicle</p>
+                            </div>
+                            <div class="col text-center">
+                                <img src="./assets/nightFromVehicle.png" alt="Theft from vehicle night" style="width: 100%;">
+                                <p>Nighttime theft from a vehicle</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center">
+                                <img src="./assets/theftofVehicleDay.png" alt="Theft from vehicle night" style="width: 100%;"> 
+                                <p>Daytime theft of a vehicle</p>
+                            </div>
+                            <div class="col text-center">
+                                <img src="./assets/theftOfVehicle.png" alt="Theft from vehicle daytime" style="width: 100%;">
+                                <p>Nighttime theft of a vehicle</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center">
+                                <img src="./assets/crimeHeatMap.png" alt="heatmap of vancouver" style="width: 100%;">
+                                <p>Vehicle related crimes in Vancouver</p>
+                            </div>
+                        </div>    
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div id="" class="prjItem">
+                <h2 class="">Urban Heat Island - Esri App Challenge</h2>
+                <ul>
+                    <li class="prjText">
+                        Esri App Challenge is an event hosted by Esri Canada for student to create an app using Esri technology to create a solution to a problem in a week. More about the challenge <a href="https://ecce.esri.ca/app-challenge/">here.</a>
+                    </li>
+                    <li class="prjText">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Urban_heat_island.svg/1200px-Urban_heat_island.svg.png" alt="Urban Heat Island image" style="width: 100%">
+                    </li>
+                    <li class="prjText">
+                        My group decided to create an app focusing on urban heat islands in the City of Vancouver due to recent heatwave events. I gathered and downloaded datasets from landsat 8 and calculated land surface temperature from that data. We created datasets of impervious surfaces, canopy cover and population density. The result is an Esri Storymap with the analysis of urban heat islands and showcase where vulnerable populations are during a heatwave. Keep in mind everything created for this project was made in a week.
+                    </li>
+                    <li class="prjText">
+                        <a href="https://storymaps.arcgis.com/stories/bf991862b8914580a0371caab9095260">Link to storymap</a> or view the embedded storymap below
+                    </li>
+                    <iframe src="https://storymaps.arcgis.com/stories/bf991862b8914580a0371caab9095260" width="100%" height="500px" frameborder="0" allowfullscreen allow="geolocation"></iframe>
+                    <li class="prjText">
+                        <ahref="https://youtu.be/U1odqXTTqp8">Video </a>submission for our app <br>
+                    </li>
+                    <li class="prjItem">
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/U1odqXTTqp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div id="" class="prjItem">
+                <h2 class="">Sumas Flood Feature Extraction</h2>
+                <ul>
+                    <li>Using Landsat 8 imagery and using supervised/unsupervised classification in ArcGIS Pro I was able to extract water features of the <a href="https://www.cbc.ca/news/canada/british-columbia/bc-floods-sumas-prairie-before-after-images-1.6258803">Sumas Flood</a> that occurred in BC in 2021</li>
+                    <li class="container">
+                        <div class="row align-items-start">
+                            <div class="col text-center">
+                                <img src="./assets/sumasFloodAOI.png" alt="Area of interest" style="width: 100%;"> 
+                                <p>Sumas flood area of interest</p>
+                            </div>
+                            <div class="col text-center">
+                                <img src="./assets/sumasFloodAOI_colour.png" alt="Colour changed to highlight the water" style="width: 100%;">
+                                <p>Band combination changed to highlight the water</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center">
+                                <img src="./assets/floodResult.png" alt="Result of classification" style="width: 100%;"> 
+                                <p>Shapefile creation of water features extracted<br>
+                                    Link to download the <a href="https://drive.google.com/drive/folders/1DQUazjgQokzYicYVc0PqTeF0YdWYugIB?usp=sharing">shapefile</a></p>
+                            </div>
+                            <div class="text-center">
+                                <img src="./assets/sumasFloodScene.png" alt="Datasets in a 3d scene" style="width: 100%;">
+                                <p>Flood dataset visualized in a scene </p>
+                            </div>
+                        </div> 
+                    </li>
+                    <li>
+                        <p style="display: hidden;">A demo video on how I was able to extract the features using supervised and unsupervised learning</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div id="" class="prjItem">
+                <h2 class="">Raspberry Pi Servo Server</h2>
+                <ul>
+                    <li class="prjText">
+                        Using a Raspberry Pi and a servo controller I created a website that enables users to control servo motors from another device. This was programmed in python and the link to the repository is <a href="https://github.com/ferdsdo/raspberryPiServoServer">here.</a>
+                    </li>
+                    <li>
+                        <img class="prjPicture" src="./assets/raspberryDemo.gif" alt="demo of servo server">
+                        <br>
+                        <p class="prjText">One servo reads the y-axis and the other reads the x-axis. The web server is running on the Pi and users connect to it through the browser.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div id="" class="prjItem">
+                <h2 class="">Tryhackme.com</h2>
+                <ul>
+                    <li class="prjText">
+                        <a href="https://tryhackme.com/">tryhackme.com</a> is a website to learn all things cyber security. I am currently in the top 2% of all users on the website.<br>Here is my profile: <script src="https://tryhackme.com/badge/161585"></script>
+                    </li>
+                    <li>
+                        Topics include
+                        <ol>
+                            <li>
+                                Web Fundamentals
+                            </li>
+                            <li>
+                                Intro to Cyber Security
+                            </li>
+                            <li>
+                                Offensive Pentesting
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <p>
+                Thanks for taking the time to check out some of the things I have been working on. 
+            </p>
+        </div>
+    </div>
+    <div id="bottom" class="position-sticky container-fluid front">
+        <div class="row">
+            <div id="contact" class="" href="#contact">
+                <h2 class="">Contact</h2>
+                <ul>
+                    <li>Email: <a href="mailto:ferdinand.dorado@gmail.com">ferdinand.dorado@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="position-sticky container-fluid front" id="footer">
+        <footer class="">
+            <p>
+                Made with HTML, Bootstrap and THREE.js 
+                <br>
+                Ferdinand Dorado 2022
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
